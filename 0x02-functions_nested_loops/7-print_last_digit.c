@@ -5,11 +5,12 @@
  * Return:value of the last digit 
  */
 int print_last_digit(int n)
-{	int i;
+{
+	int i;
+
 	i = n % 10;
 	if (n < 0)
-	{
-		i = (-1 * i);
+	{	i = (-1 * i);
 	}
 	_putchar(i + '0');
 	return (i);
