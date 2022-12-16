@@ -3,8 +3,15 @@
 /**
  * main - prime factors
  * Return: Always 0 (Success)
- *
- * @n: number
+ */
+int main(void)
+{
+	factor_prime(1231952);
+	return (0);
+}
+
+/**
+  * @n: number
  * factor_prime - the function prints the number prime factors
  */
 void factor_prime(long n)
