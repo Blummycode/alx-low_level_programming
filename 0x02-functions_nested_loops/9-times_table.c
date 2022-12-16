@@ -4,16 +4,16 @@
  */
 void times_table(void);
 {
-	int rows, columns, d;
+	int r, c, d;
 
-	for (rows = 0; rows <= 9; rows++)
+	for (r = 0; r <= 9; r++)
 	{
 		_putchar('0');
-		for (columns = 0; columns <= 9; columns++)
+		for (c = 0; c <= 9; c++)
 		{
 			_putchar(',');
 			_putchar(' ');
-			d = rows * columns;
+			d = r * c;
 			if (d <= 9)
 			{
 				_putchar(' ');
