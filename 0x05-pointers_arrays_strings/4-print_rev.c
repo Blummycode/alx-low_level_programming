@@ -16,7 +16,6 @@ void print_rev(char *s)
 	}
 	s--;
 	for (k = longj; k > 0; k--)
-	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(*s);
 		s--;
