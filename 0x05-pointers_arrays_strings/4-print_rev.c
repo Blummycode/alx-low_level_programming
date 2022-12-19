@@ -1,4 +1,4 @@
-#input "main.h"
+#include "main.h"
 /**
 * print_rev - prints string in reverse
 * @s: string input
