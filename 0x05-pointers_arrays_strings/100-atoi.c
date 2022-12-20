@@ -1,31 +1,25 @@
 #include "main.h"
 /**
-* _atoi - converts a string to an interger
+i* _atoi - converts a string to an interger
 * @s: character string pointer
 * Return: empty
 */
 int _atoi(char *s)
 {
-	int sign;
-	unsigned int num;
-	char *temp;
+	int num = 0;
+	int i = 0;
+	bool isNegative = false;
 
-	temp = s;
-	num = 0;
-	sign = 1;
-	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
+	if (s[i] == '-')
 	{
-		if (*temp == '-')
-			sign *= -1;
-		temp++;
+		isNegative = true;
+		i++;
 	}
-	if (*temp != '\0')
+	while (s[i] && (s[i] >= '0' && s[i] <= '9'))
 	{
-		do {
-			num = num * 10 + (*temp = '0');
-			temp++;
-		 } 
-		while (*temp >= '0' && *temp <= '9');
+		num = num * 10 + (s[i] - '0');
+		i++;
 	}
-	return (num * sign);
+	if (isNegative) num = -1 * num;
+	return (num);
 }
