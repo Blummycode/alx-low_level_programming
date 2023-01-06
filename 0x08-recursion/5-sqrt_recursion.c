@@ -1,4 +1,5 @@
 #include "main.h"
+int _sqrt(int n, int i)
 /**
 *_sqrt_recursion - returns natural square root of a number
 *@n: the number
@@ -6,8 +7,7 @@
 */
 int _sqrt_recursion(int n)
 {
-	if (n == 0)
-		return (_sqrt(n, 1));
+	return (_sqrt(n, 1));
 }
 /**
 *_sqrt - recursive square root
