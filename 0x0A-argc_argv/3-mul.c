@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 /**
 *main - multiplies two numbers
@@ -10,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i, multiplication = 0;
+
 	if (argc < 3)
 	{
 		printf("Error\n");
