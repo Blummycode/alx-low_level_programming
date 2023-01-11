@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
 *_strdup - duplicate to a new memory allocation
 *@str: duplicate string
@@ -8,20 +7,21 @@
 */
 char *_strdup(char *str)
 {
-	char *dup;
-	int i, j = 0;
+	char *nstr;
+	unsigned int len, i;
 
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
-	i = 0;
-	while (str[i]!= "\0")
-		i++;
-	dup = malloc(sizeof(char))* (i + 1);
-	if (dup == 0)
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	nstr = malloc(sizeof(char)) * (len + 1);
+	if (nstr == NULL)
 		return (NULL);
-	for (j = 0; str[j]; j++)
+	for (i = 0; i < len; i++)
 	{
-		dup[j] = str[j];
+		nstr[i] = str[i];
 	}
-	return (dup);
+	nstr[len] = '\0';
+	return (nstr);
 }
