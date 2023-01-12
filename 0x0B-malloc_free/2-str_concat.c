@@ -11,13 +11,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	unsigned int size;
-	unsigned int i;
+	int size;
+	int i;
 
 	int s1_length = strlen(s1);
 	int s2_length = strlen(s2);
 	int size = s1_length + s2_length + 1;
-	char *s = malloc(size, sizeof(char))
+	char *s = malloc(size * sizeof(char));
 	for (int i = 0; i < s1_length; i++0)
 	{
 		s[i] =  s1[i];
