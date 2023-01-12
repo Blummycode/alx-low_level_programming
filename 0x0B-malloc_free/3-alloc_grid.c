@@ -5,7 +5,7 @@
 *alloc_grid - create a matrix using malloc
 *@width: the grid's width
 *@height: the grid's height
-*return: 0 if width or height is 0 or negative and null on failure
+*Return: 0 if width or height is 0 or negative and null on failure
 */
 int **alloc_grid(int width, int height)
 {
