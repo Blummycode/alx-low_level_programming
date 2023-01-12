@@ -9,7 +9,7 @@
 */
 int get_str_len(char *str)
 {
-	int i;
+	unsigned  int i;
 	for (i = 0; str[i] != '\0'; i++)
 	return (i + 1);
 }
@@ -22,17 +22,18 @@ int get_str_len(char *str)
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int s1_size, s2_size, i, j;
+	unsigned int size, i, j;
 
-	s1_size = get_str_len(s1);
-	s2_size = get_str_len(s2);
-	s = (char *) malloc(((sizeof(char) * (s1_size + s2_size - 1));
+	size = (_strlen(s1) + _strlen(s2) + 1);
+	s = (char *) malloc(sizeof(char) * size);
 	if (s == NULL)
 		return(NULL);
-	for (i = 0; s1[i] != '\0'; i++)
-		s[i] = s1[i];
-	for (j = 0; s2[j] != '\0'; j++, i++)
-		s[i] = s2[j];
-	s[i] = '\0';
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		*(s + i) = *(s1 + i);
+	for (j = 0; *(s2 + j) != '\0'; j++)
+	{
+		*(s + i) = *(s2 + j);
+		i++;
+	}
 	return (s);
 }
