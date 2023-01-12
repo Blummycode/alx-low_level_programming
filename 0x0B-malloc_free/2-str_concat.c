@@ -3,15 +3,19 @@
 #include <string.h>
 #include <stdio.h>
 /**
-*get_str_len - gets a string length
+*_strlen - gets a string length
 *@str: string whose length is to be found
 *Return: returns interger value of the string
 */
-int get_str_len(char *str)
+int _strlen(char *str)
 {
 	unsigned  int i;
-	for (i = 0; str[i] != '\0'; i++)
-	return (i + 1);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /**
 *str_concat - concatenates two strings
