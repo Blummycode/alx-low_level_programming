@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - prints minimum number of coins to make change
-* @argc: argument count
-* @argv: argument vector 
-* Return: Always 0 (success)
+*main - prints minimum number of coins to make change
+*@argc: argument count
+*@argv: argument vector 
+*Return: Always 0(success)
 */
 int main(int argc, char *argv[])
 {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	while (cents > 0)
 	{
 		if (cents >= 25)
-			cents -=25;
+			cents -= 25;
 		else if (cents >= 10)
 			cents -= 10;
 		else if (cents >= 5)
@@ -32,4 +32,4 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", ncoins);
 	return (0);
-}	
+}
