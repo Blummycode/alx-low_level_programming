@@ -18,12 +18,12 @@ int _strlen(char *str)
 	return (len);
 }
 /**
-*_strcopy - copies source string to destination
+*_strcpy - copies source string to destination
 *@dest: Buffer storing the string copy
 *@src: source string to be copied
 * Return: Pointer to the copied string
 */
-char *_strcopy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
@@ -55,8 +55,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(poppy);
 		return (NULL);
 	}
-	poppy->name = _strcopy(poppy->name, name);
+	poppy->name = _strcpy(poppy->name, name);
 	poppy->age = age;
-	poppy->owner = _strcopy(poppy->owner, owner);
+	poppy->owner = _strcpy(poppy->owner, owner);
 	return (poppy);
 }
