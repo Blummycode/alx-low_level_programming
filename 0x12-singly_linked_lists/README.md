@@ -1,1 +1,1 @@
-a linked list node contains data and link with address of next node
+linked list is a data structure type. Each node contains data and address of the next node
